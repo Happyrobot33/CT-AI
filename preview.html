@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<script>
+			const { ipcRenderer } = require('electron');
+			var framerate = 20; // In frames per second
+
+			ipcRenderer.on('frame', (event, arg) => {
+				document.getElementById("prev").src = 'data:image/gif;base64,' + Buffer.from(arg).toString('base64');
+			});
+
+			setInterval(() => {
+				ipcRenderer.send('frameRequest');
+			}, 1000 / framerate);
+		</script>
+	</head>
+	<body style="margin: 0px; padding: 0px; overflow: hidden;">
+		<img id="prev" style="display: block; margin-left: auto; margin-right: auto; width: 100%;"/>
+	</body>
+</html>
