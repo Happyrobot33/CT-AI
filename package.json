@@ -11,5 +11,8 @@
     "url": "http://www.github.com/noahkra/ct-ai"
   },
   "author": "Noahkra & LoLo5689",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "sharp": "^0.25.3"
+  }
 }

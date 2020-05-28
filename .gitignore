@@ -41,3 +41,7 @@ node_modules/
 
 # generate output
 dist
+
+## test files
+input.png
+input_mod.png
